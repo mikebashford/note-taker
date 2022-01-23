@@ -32,18 +32,17 @@ router.post('/notes', (req, res) =>
 
 router.delete('/notes/:id', (req, res) =>
 {
-  //splice note from array in db fs.readfile then remove item then fs.writefile
-  let noteId = req.params.id.toString();
-
-  console.log(noteId);
-
+  const index = notes.findIndex(({id}) => id == req.params.id);
+  if( index >= 0)
+  {
+    notes.splice(index, 1);
+  }
   fs.readFile('./db/db.json', 'utf-8', (err) =>
   {
     if(err)
     {
       console.log(err);
     }
-    notes.splice(noteId -1);
     fs.writeFile('./db/db.json', JSON.stringify(notes, null, 4), (writeErr) =>
     {
       writeErr ? console.log(writeErr) : console.info('Successfully deleted note!');
