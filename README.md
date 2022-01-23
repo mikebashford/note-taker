@@ -7,10 +7,10 @@
 * Express
 * Node.js
 
+## Website Screenshot
+![Screenshot](/note-taker/public/assets/images/note-taker.png)
 ## Heroku page
+https://damp-brook-74725.herokuapp.com/
 
-
-## Demo
-[Demo]()
 ## Credits
 Made by Mike Bashford
