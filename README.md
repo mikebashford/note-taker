@@ -3,7 +3,7 @@
   A website to take and store notes with!
   
 ## Installation
- * Clone the repository to your preffered development environment.
+ * Clone the repository to your preferred development environment.
  * Run npm install to install all dependencies. 
  
 ## Usage
